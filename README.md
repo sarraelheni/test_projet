@@ -1,189 +1,24 @@
-<<<<<<< HEAD
-# Projet Final – Test Logiciel Manuel
+# Projet de Tests Manuels et Automatisés – Test_Projet
 
-## Groupe
-- Testeur : Hanine Ben Ahmed
-- Site choisi : [Rahul Shetty Automation Practice](https://rahulshettyacademy.com/AutomationPractice/)
-- Fonctionnalité testée : Switch to Alert Example
-- Date du test : 18 Novembre 2025
-- Type de test : Manuel / Fonctionnel
-- Navigateur : Google Chrome 119.0
-- Système d’exploitation : Windows 10
-- Version du rapport : 1.0
+## 📌 Présentation
+Ce dépôt contient l’ensemble des travaux réalisés pour les **tests manuels** et **tests automatisés** d’applications web et scripts Python.  
+Il regroupe plusieurs branches fusionnées dans `main` pour fournir une vue complète du projet.
 
----
+### Objectifs
+- Centraliser les rapports et scripts de tests manuels.  
+- Automatiser les tests avec Python et Selenium.  
+- Fournir un dépôt structuré et traçable pour tous les tests.
 
-## I. Objectif
-L'objectif de ce projet est de réaliser un test manuel sur la fonctionnalité "Switch to Alert" pour vérifier la gestion des alertes JavaScript dans le site web choisi.
-
----
-
-## II. Périmètre du test
-La fonctionnalité testée couvre :
-1. Champ **Enter Your Name** : saisie de texte.
-2. Bouton **Alert** : affichage de l’alerte, lecture du message, clic sur OK.
-3. Bouton **Confirm** : affichage de l’alerte de confirmation, lecture du message et validation des deux actions possibles (OK / Cancel).
-
----
-
-## III. Plan de test
-
-| ID Test | Objectif | Préconditions | Étapes d’exécution | Résultat attendu | Résultat obtenu | Statut |
-|---------|----------|---------------|------------------|-----------------|----------------|--------|
-| CT-01   | Affichage de l’alerte | Page ouverte, bouton visible | Cliquer sur "Click for JS Alert" | Alerte affichée | Alerte affichée | PASS |
-| CT-02   | Vérification du message | Alerte affichée | Lire le texte de l’alerte | "This is a JavaScript Alert" | "This is a JavaScript Alert" | PASS |
-| CT-03   | Test du bouton OK | Alerte affichée, bouton OK visible | Cliquer sur OK | Alerte se ferme, page interactive | Alerte se ferme, page interactive | PASS |
-| CT-04   | Message après fermeture | Alerte fermée | Observer la page | Message : "You successfully clicked an alert" | Aucun message affiché | FAIL |
-
-**Statistiques :**
-- Nombre total de cas de test : 4
-- Tests réussis (PASS) : 3
-- Tests échoués (FAIL) : 1
-- Taux de réussite : 75%
-- Durée totale des tests : 2 minutes
-
----
-
-## IV. Rapport d’anomalie
-
-**Bug ID** : BUG-001  
-**Titre** : Message après fermeture de l’alerte non affiché  
-**Description** : Après avoir cliqué sur le bouton Alert et validé l’alerte avec OK, le message attendu `"You successfully clicked an alert"` ne s’affiche pas sur la page.  
-**Gravité** : Élevée  
-**Priorité** : Moyenne  
-**État** : Ouvert  
-**Étapes pour reproduire** :
-1. Accéder à la page AutomationPractice  
-2. Saisir un nom dans le champ Enter Your Name  
-3. Cliquer sur Alert  
-4. Cliquer sur OK dans l’alerte
-
----
-
-## V. Observations et recommandations
-- Corriger le script JavaScript pour afficher correctement le message après la fermeture de l’alerte.  
-- Ajouter un test de validation post-alerte dans le cycle de test.  
-- Vérifier la compatibilité sur différents navigateurs (Chrome, Firefox, Edge).
-
----
-
-## VI. Annexes
-- Captures d’écran prises pendant les tests (voir dossier `screenshots/` si disponible).  
-- Environnement de test : Windows 10, Chrome 119.0, résolution 1920x1080.  
-
----
-
-**Fin du rapport – Document conforme aux standards de test logiciel**  
-Réalisé par : Hanine Ben Ahmed
-=======
-# Projet de Tests Manuels et Automatisés – Automation Practice
-
-Ce dépôt regroupe l’ensemble du travail de tests réalisé sur le site :
-
-> https://rahulshettyacademy.com/AutomationPractice/
-
-Il s’inscrit dans le cadre du module **Tests Manuels et Automatisés** de la Licence **Business Computing** à l’ESPRIT School of Business.  
-Le projet combine :
-
-- une **démarche de test manuel structurée** (plan de test, cas de test, exécution, analyse),
-- des **scripts de tests automatisés** développés en **Python/Selenium**,
-- une **analyse critique** des résultats et des anomalies détectées.
-
----
-
-## 1. Objectifs du projet
-
-Les principaux objectifs pédagogiques sont :
-
-- Appliquer une **méthodologie de test professionnelle** (cycle de vie des tests).
-- Rédiger un **rapport de tests** clair et structuré (introduction, planification, conception, exécution, analyse).
-- Mettre en œuvre des **tests automatisés** avec Selenium WebDriver :
-  - interaction avec les éléments d’interface (checkboxes, liens, boutons),
-  - validation des comportements attendus,
-  - détection d’anomalies fonctionnelles.
-- Comparer les apports et les limites :
-  - des **tests manuels**,
-  - des **tests automatisés**.
-
----
-
-## 2. Fonctionnalités testées
-
-Deux fonctionnalités principales du site Automation Practice ont été étudiées :
-
-### 2.1. Fonctionnalité « Checkboxes »
-
-Zone de sélection multiple, composée de trois cases à cocher :
-
-- `Option1`
-- `Option2`
-- `Option3`
-
-Les tests portent notamment sur :
-
-- la **sélection / désélection** individuelle de chaque checkbox ;
-- la possibilité de **cocher plusieurs cases simultanément** ;
-- la cohérence de l’état affiché par le navigateur après chaque action.
-
-### 2.2. Fonctionnalité « Social Media »
-
-Section située en bas de page, présentant les libellés :
-
-- `Facebook`
-- `Twitter`
-- `Google+`
-- `Youtube`
-
-Les tests visent à vérifier que chaque élément :
-
-- est implémenté comme un **lien cliquable** (`<a>` avec attribut `href`) ;
-- redirige correctement l’utilisateur (ou ouvre un nouvel onglet) vers le réseau social attendu ;
-- respecte les bonnes pratiques d’ergonomie et de navigation.
-
----
-
-## 3. Contenu du dépôt
-
+## 📂 Structure du projet
+### 1️⃣ Tests Manuels
 - `Rapport_de_Tests_Manuels_et_Automatisés.pdf`  
-  Rapport complet incluant :
-  - description du site et des fonctionnalités ;
-  - stratégie de test et périmètre ;
-  - cas de tests détaillés (tests manuels) ;
-  - résultats, anomalies, propositions d’amélioration ;
-  - introduction aux scripts de tests automatisés.
+- `ScriptTest Automatisé.docx`  
+- Autres PDFs : `signup.pdf`, `lien.pdf`, `dropdown.pdf`
 
-- `test_checkbox.py`  
-  Script d’automatisation des tests sur la fonctionnalité **Checkboxes** :
-  - ouverture du navigateur et accès à la page Automation Practice ;
-  - sélection puis désélection de chaque checkbox ;
-  - vérification de l’état avec `is_selected()` après chaque action ;
-  - scénario global avec les **trois cases cochées** pour valider la tolérance multi-sélection.
+### 2️⃣ Tests Automatisés
+Scripts Python :  
+`test_checkbox.py`, `test_radio_buttons.py`, `test_social_media.py`, `test_switch_alert.py`, `test_practice.py`, `dropdown.py`, `lien.py`, `signup.py`
 
-- `test_social_media.py`  
-  Script d’automatisation des tests sur la section **Social Media** :
-  - défilement de la page jusqu’à la zone des réseaux sociaux ;
-  - recherche des libellés `Facebook`, `Twitter`, `Google+`, `Youtube` ;
-  - contrôle de la nature de l’élément HTML (lien `<a>` ou texte statique) ;
-  - vérification de l’existence d’un `href` et de l’ouverture d’un nouvel onglet ;
-  - affichage d’un résumé et signalement des anomalies en console (et éventuelle alerte dans le navigateur).
-
----
-
-## 4. Environnement technique
-
-- **Langage** : Python 3
-- **Framework d’automatisation** : Selenium WebDriver
-- **Gestionnaire de driver** : `webdriver-manager` (pour le driver Chrome)
-- **Navigateur ciblé** : Google Chrome
-- **IDE / Éditeur** : Visual Studio Code (ou équivalent)
-- **Système d’exploitation** : Windows 10
-
----
-
-## 5. Prérequis
-
-Avant d’exécuter les scripts, installer les dépendances suivantes :
-
+## ⚙️ Installation et Exécution
 ```bash
-pip install selenium webdriver-manager
->>>>>>> origin/syrine_tests
+python test_checkbox.py
